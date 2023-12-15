@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="Portfolio">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    src = "https://kit.fontawesome.com/0acb75a9e8.js"
+    crossorigin = "anonymous"
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style3.css" />
+  <title>Portfolio Illies Stili</title>
+  <script src="https://kit.fontawesome.com/0acb75a9e8.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <nav id="myTopnav" class="topnav">
+      <span>Portfolio Stili Illies </span>
+      <a href="#profil" class="active">Accueil</a>
+      <a href="#edito">À propos</a>
+      <a href="#projets">Projets</a>
+      <a href="#contact">Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="toogleResponsive()" aria-label="menu burger">
+        <em class="fa fa-bars"></em>
+      </a>
+    </nav>
+  </header>
+  <main>
+    <section id="profil">
+      <H1>Illies Stili</H1>
+      <H2>Portefolio numérique</H2>
+      <img id="photo" src="image/profil.jpg" alt="Ici prochainement : Photo de profil proffessionnelle decontractée" />
+    </section>
+    <section id="edito" class="slideshow-container">
+      <!-- Le diaporama -->
+      <!-- Insertion des 3 images de présentation dynamique et de leur légende -->
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="image/Stage.jpg" alt="illustration de maraichage" style="width: 100% ">
+        <div class="text">Stage été 2023</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="image/univers.jpg" alt="illustration python" style="width:100% ">
+        <div class="text">Projet codage Python</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="image/voiture.jpg" alt="image de bateau" style="width:100%">
+        <div class="text">Ma passion pour les voiture de luxe</div>
+      </div>
+      <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) { slideIndex = 1 }
+          if (n < 1) { slideIndex = slides.length }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex - 1].style.display = "block";
+          dots[slideIndex - 1].className += " active";
+        }
+      </script>
+
+      <!-- les points de navigation -->
+      <div style="text-align: center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+
+      <!-- flèches de navigation  -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+      <!-- les points de navigation -->
+      <!-- Enchainement des 6 flipbox avec leur id, leur classe et les donées texte -->
+    </section>
+    <section id="projets">
+      <div class="flip-box" id="projet1">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <h2>flipbox</h2>
+          </div>
+          <div class="flip-box-back">
+            <h2>flipbox</h2>
+          </div>
+        </div>
+      </div>
+      <div class="flip-box" id="projet2">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <h2>flipbox</h2>
+          </div>
+          <div class="flip-box-back">
+            <h2>flipbox </h2>
+          </div>
+        </div>
+      </div>
+      <div class="flip-box" id="projet3">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <h2>flipbox</h2>
+          </div>
+          <div class="flip-box-back">
+            <h2>flipbox</h2>
+          </div>
+        </div>
+      </div>
+      <div class="flip-box" id="projet4">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <h2>flipbox</h2>
+          </div>
+          <div class="flip-box-back">
+            <h2>flipbox</h2>
+          </div>
+        </div>
+      </div>
+      <div class="flip-box" id="projet5">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <h2>flipbox</h2>
+          </div>
+          <div class="flip-box-back">
+            <h2>flipbox</h2>
+          </div>
+        </div>
+      </div>
+      <div class="flip-box" id="projet6">
+        <div class="flip-box-inner">
+          <div class="flip-box-front">
+            <h2>flipbox</h2>
+          </div>
+          <div class="flip-box-back">
+            <h2>flipbox</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Pour me contacter</h2>
+      <form action="traitement.php" method="post">
+        <table>
+          <tr>
+            <td><label for="firstname">Prénom :</label></td>
+            <td>
+              <input type="text" name="firstname" id="firstname" placeholder="Votre prénom" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="lastname">Nom :</label></td>
+            <td>
+              <input type="text" name="lastname" id="lastname" placeholder="votre nom" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="email">Adresse mail :</label></td>
+            <td>
+              <input type="email" name="email" id="email" placeholder="Votre adresse mail" />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="objet">Objet du message :</label></td>
+            <td>
+              <input type="text" name="objet" id="objet" placeholder="Objet du message" />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><label for="message">Votre message :</label></td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2"><input type="button" onclick="submit()" value="Envoyer" /></td>
+          </tr>
+        </table>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <a href="https://twitter.com/MoSli02779034" target="_blank" aria-label="icône twitter">
+        <em class="fab fa-twitter fa-5x"></em>
+    </a>
+    <a href="https://www.linkedin.com/in/illies-stili-2996b6222/" target="_blank" aria-label="icône linkedin">
+        <em class="fab fa-linkedin fa-5x"></em>
+    </a>
+    <a href="https://fr.wikipedia.org/wiki/Instagram" target="_blank" aria-label="icône instagram">
+        <em class="fab fa-instagram fa-5x"></em>
+    </a>
+   </footer>
+   <div id="arrow-up">
+    <a href="#" aria-label="flèche top">
+        <em class="fas fa-arrow-up fa-3x"></em>
+    </a>
+</div>
+</body>
+</html>
